@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="DemoApp">
+<head>
+	<meta charset="UTF-8">
+	<title ng-model="title">Demo dengan menggunakan controller</title>
+</head>
+<body>
+	<div>isi dari outside adalah: {{ outside }}</div>
+	<div ng-controller="MyCtrl">
+		{{ inside }}
+	</div>
+
+	<script type="text/javascript" src="angular.min.js"></script>
+	<script type="text/javascript">
+
+		angular.module('DemoApp', [])
+		.controller('MyCtrl',function($scope,$rootScope){
+			$rootScope.outside = "hello world";
+			$scope.inside = "Ini adalah text yang dikirimkan dari MyCtrl";
+		});
+	</script>
+</body>
+</html>

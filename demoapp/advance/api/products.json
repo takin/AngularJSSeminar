@@ -1,0 +1,16 @@
+[
+	{
+		"id":1,
+		"name":"Mac Book Air Retina Display", 
+		"description":"Mac Book Air Retina Display adalah produk premium buatan Apple Computer", 
+		"price":25000,
+		"panelClass":"info"
+	},
+	{
+		"id": 2,
+		"name":"iPhone 5", 
+		"description":"iPhone 5 merupakah produk terbaru dari Apple Computer",
+		"price":15000, 
+		"panelClass" : "success"
+	}
+]

@@ -1,0 +1,28 @@
+.form-container {
+	padding:20px 0;
+}
+.product-item-body{
+	height: 150px;
+}
+.anime-ui.ng-enter{
+	-moz-animation: zoomIn 1s;
+}
+.anime-ui.ng-leave-stagger{
+	animation-delay: .2s;
+}
+.anime-ui.ng-leave{
+	-moz-animation: zoomOut 1s;
+}
+.anime-list-up.ng-enter{
+	-webkit-animation: zoomIn .8s;
+	animation: zoomIn .8s;
+	/*opacity: 0;*/
+}
+.anime-list-up.ng-enter-stagger, .anime-list-up.ng-leave-stagger{
+	-webkit-animation-delay: .2s;
+	animation-delay: .2s;
+	/*opacity: 1;*/
+}
+.anime-list-up.ng-leave{
+	animation: zoomOut 1s;
+}

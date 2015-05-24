@@ -1,28 +1,57 @@
-.form-container {
-	padding:20px 0;
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+.my-container {
+	margin: 0 50px;
+}
+.content-container{
+	margin-top: 30px;
 }
 .product-item-body{
 	height: 150px;
 }
-.anime-ui.ng-enter{
-	-moz-animation: zoomIn 1s;
+.anime-list-up{
+	display: block;
+	position: relative;
+	z-index:1;
 }
-.anime-ui.ng-leave-stagger{
-	animation-delay: .2s;
+
+.anime-list-up.ng-leave{
+	-webkit-animation: hinge 2s;
+	animation: hinge 2s;
+	position: absolute;
+	z-index: 0;
+	width: 100%;
 }
-.anime-ui.ng-leave{
-	-moz-animation: zoomOut 1s;
-}
+
 .anime-list-up.ng-enter{
-	-webkit-animation: zoomIn .8s;
-	animation: zoomIn .8s;
-	/*opacity: 0;*/
+	-webkit-animation: bounceIn 1s;
+	animation: bounceIn 1s;
 }
-.anime-list-up.ng-enter-stagger, .anime-list-up.ng-leave-stagger{
+.anime-list-up.ng-enter-stagger,.anime-list-up.ng-leave-stagger{
 	-webkit-animation-delay: .2s;
 	animation-delay: .2s;
-	/*opacity: 1;*/
 }
-.anime-list-up.ng-leave{
-	animation: zoomOut 1s;
+
+.animation{
+	display: block;
+    position: relative;
 }
+
+.animation.ng-leave-stagger{
+	-webkit-animation-delay: 5s;
+	animation-delay: 5s;
+}
+
+.animation.ng-enter { 
+	-webkit-animation: fadeInRight 1s;
+	animation: fadeInRight 1s;
+	z-index: 0;
+}
+
+.animation.ng-leave { 
+	-webkit-animation: fadeOutLeft 1.5s;
+	animation: fadeOutLeft 1.5s;
+	z-index: 1;
+	position: absolute;
+} 

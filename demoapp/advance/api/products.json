@@ -12,5 +12,26 @@
 		"description":"iPhone 5 merupakah produk terbaru dari Apple Computer",
 		"price":15000, 
 		"panelClass" : "success"
+	},
+	{
+		"id": 3,
+		"name":"Oppo Find 5", 
+		"description":"Oppo Find 5 merupakah produk terbaru dari Oppo",
+		"price":300, 
+		"panelClass" : "danger"
+	},
+	{
+		"id": 4,
+		"name":"Samsung Gakaxy S6", 
+		"description":"Samsung Galaxy S6 merupakah produk terbaru dari Samsung electroics",
+		"price":15000, 
+		"panelClass" : "info"
+	},
+	{
+		"id": 5,
+		"name":"iPad 4", 
+		"description":"iPhone 4s merupakah produk terbaru dari Apple Computer",
+		"price":15000, 
+		"panelClass" : "success"
 	}
 ]

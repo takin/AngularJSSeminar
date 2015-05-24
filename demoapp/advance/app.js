@@ -11,9 +11,7 @@ angular.module('myApp',['ngRoute','ngAnimate'])
                 controller: 'ProductsCtrl',
                 resolve: {
                         products: ['Products', function(Products){
-                                return Products.getAll().then(function(res){
-                                        return res;
-                                });
+                                return Products.getAll();
                         }]
                 }
         })

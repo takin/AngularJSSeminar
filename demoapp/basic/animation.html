@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="animate.min.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+	<script type="text/javascript" src="angular.min.js"></script>
+	<script type="text/javascript" src="angular-animate.min.js"></script>
+	<script type="text/javascript">
+		angular.module('myApp',['ngAnimate'])
+		.controller('MyCtrl', function($scope, $timeout){
+			$timeout(function(){
+				$scope.users = ['aku','kamu','dia','mereka'];
+			}, 1000);
+		});
+	</script>
+</head>
+<body>
+	<div ng-controller="MyCtrl">
+		<div ng-repeat="user in users" class="animation">{{ user }}</div>
+	</div>
+</body>
+</html>

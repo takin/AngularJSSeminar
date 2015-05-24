@@ -1,0 +1,35 @@
+<form name="myForm" ng-submit="addProduct(myForm.$valid)" class="form-inline" novalidate>
+<fieldset>
+  <div ng-class="{'form-group': true,'has-success' : myForm.name.$valid}">
+    <div class="col-lg-3">
+      <input required ng-model="product.name" type="text" name="name" placeholder="{{placeholder.name}}" class="form-control">
+    </div>
+  </div>
+  <div ng-class="{'form-group': true, 'has-feedback': true, 'has-success' : myForm.price.$valid, 'has-error':myForm.price.$error.pattern}">
+    <div class="col-lg-3">
+      <input required ng-model="product.price" ng-pattern="/^[1-9]{1}[0-9]{3,4}$/" type="text" name="price" placeholder="Product price" class="form-control">
+    </div>
+  </div>
+  <div ng-class="{'form-group': true,'has-success' : myForm.description.$valid}">
+    <div class="col-lg-5">
+      <input required ng-model="product.description" type="text" name="description" placeholder="Product description" class="form-control">
+    </div>
+  </div>
+  <div class="radio">
+    <label type="radio">
+      <input type="radio" ng-model="product.panelClass" checked="true" value="info"> Biru
+    </label>
+  </div>
+  <div class="radio">
+    <label type="radio">
+      <input type="radio" ng-model="product.panelClass" value="danger"> Merah
+    </label>
+  </div>
+  <div class="radio">
+    <label type="radio">
+      <input type="radio" ng-model="product.panelClass" value="success"> Hijau
+    </label>
+  </div>
+  <button type="submit" ng-disabled="myForm.$invalid" class="btn btn-success">Add Product</button>
+</fieldset>
+</form>

@@ -1,0 +1,6 @@
+.animation.ng-enter{
+	-webkit-animation: bounceInUp 1s;
+}
+.animation.ng-enter-stagger{
+	-webkit-animation-delay: .5s;
+}

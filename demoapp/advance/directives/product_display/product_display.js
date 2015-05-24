@@ -7,7 +7,7 @@ angular.module('myApp')
 			width: '=panelWidth',
 			pc: '=panelClass',
 			remove: '&onRemove',
-			isLink:'='
+			isLink:'@'
 		},
 		templateUrl: 'directives/product_display/product_display.html'
 	}

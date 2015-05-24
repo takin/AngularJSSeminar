@@ -1,1 +1,3 @@
 slide/node_modules/*
+demoapp/advance/Grunt*.js
+demoapp/advance/dist/*

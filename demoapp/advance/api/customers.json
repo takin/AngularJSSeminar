@@ -1,0 +1,92 @@
+[
+	{
+		"scutomerId": 1, 
+		"name":"Syamsul Muttaqin", 
+		"address": "Yogyakarta", 
+		"orders":[
+			{
+				"id":1,
+				"name":"Mac Book Air Retina Display", 
+				"description":"Mac Book Air Retina Display adalah produk premium buatan Apple Computer", 
+				"price":25000,
+				"panelClass":"info"
+			},
+			{
+				"id": 2,
+				"name":"iPhone 5", 
+				"description":"iPhone 5 merupakah produk terbaru dari Apple Computer",
+				"price":15000, 
+				"panelClass" : "success"
+			},
+			{
+				"id": 3,
+				"name":"Oppo Find 5", 
+				"description":"Oppo Find 5 merupakah produk terbaru dari Oppo",
+				"price":300, 
+				"panelClass" : "danger"
+			}
+		]
+	},
+	{
+		"scutomerId": 2, 
+		"name":"Albert Einstein", 
+		"address": "Klaten", 
+		"orders":[
+			{
+				"id":1,
+				"name":"Mac Book Air Retina Display", 
+				"description":"Mac Book Air Retina Display adalah produk premium buatan Apple Computer", 
+				"price":25000,
+				"panelClass":"info"
+			},
+			{
+				"id": 3,
+				"name":"Oppo Find 5", 
+				"description":"Oppo Find 5 merupakah produk terbaru dari Oppo",
+				"price":300, 
+				"panelClass" : "danger"
+			}
+		]
+	},
+	{
+		"scutomerId": 3, 
+		"name":"Mamah Dedeh", 
+		"address": "Jakarta", 
+		"orders":[]
+	},
+	{
+		"scutomerId": 4, 
+		"name":"Sarimin", 
+		"address": "Gunung Kidul", 
+		"orders":[
+			{
+				"id":1,
+				"name":"Mac Book Air Retina Display", 
+				"description":"Mac Book Air Retina Display adalah produk premium buatan Apple Computer", 
+				"price":25000,
+				"panelClass":"info"
+			},
+			{
+				"id": 3,
+				"name":"Oppo Find 5", 
+				"description":"Oppo Find 5 merupakah produk terbaru dari Oppo",
+				"price":300, 
+				"panelClass" : "danger"
+			},
+			{
+				"id": 4,
+				"name":"Samsung Gakaxy S6", 
+				"description":"Samsung Galaxy S6 merupakah produk terbaru dari Samsung electroics",
+				"price":15000, 
+				"panelClass" : "info"
+			},
+			{
+				"id": 5,
+				"name":"iPad 4", 
+				"description":"iPhone 4s merupakah produk terbaru dari Apple Computer",
+				"price":15000, 
+				"panelClass" : "success"
+			}
+		]
+	}
+]

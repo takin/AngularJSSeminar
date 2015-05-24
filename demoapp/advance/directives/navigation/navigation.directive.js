@@ -6,8 +6,8 @@ angular.module('myApp')
 		templateUrl: 'directives/navigation/navigation.html',
 		link: function(scope, element, attrs){
 			scope.menus = [
-				{link:'.', name:'Home'},
 				{link:'products', name:'Products'},
+				{link:'customers', name:'Customers'},
 				{link:'about', name:'About Us'}
 			];
 		}

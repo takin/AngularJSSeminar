@@ -10,9 +10,7 @@ angular.module('myApp')
 		price: 'placeholder harga'
 	};
 
-	$timeout(function(){
-		$scope.products = products.data;
-	},300);
+	$scope.products = products.data;
 
 	$scope.onRemove = function(index){
 		$scope.products.splice(index,1);

@@ -8,11 +8,15 @@
 		<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.css">
 		<link rel="stylesheet" type="text/css" href="bower_components/animate-css/animate.css">
 		<link rel="stylesheet" type="text/css" href="public/css/style.css">
+		<link rel="stylesheet" type="text/css" href="directives/loader/loader.css">
 		<!-- endbuild -->
 	</head>
 	<body>
 		<div class="container-fluid my-container">
 			<div class="row">
+				<div class="pull-right loader-container">
+					<my-loader ng-if="isLoading"></my-loader>
+				</div>
 				<my-navigation></my-navigation>
 			</div>
 			<div class="content-container">
@@ -35,14 +39,17 @@
 		<script type="text/javascript" src="app.js"></script>
 	
 		<script type="text/javascript" src="services/product.service.js"></script>
+		<script type="text/javascript" src="services/customer.service.js"></script>
 	
 		<script type="text/javascript" src="components/home/home.js"></script>
 		<script type="text/javascript" src="components/about/about.js"></script>
+		<script type="text/javascript" src="components/customers/customers.js"></script>
 		<script type="text/javascript" src="components/products/product.js"></script>
 		<script type="text/javascript" src="components/product_detail/product_detail.js"></script>
 		
 		<script type="text/javascript" src="directives/navigation/navigation.directive.js"></script>
 		<script type="text/javascript" src="directives/form/form.directive.js"></script>
+		<script type="text/javascript" src="directives/loader/loader.directive.js"></script>
 		<script type="text/javascript" src="directives/product_display/product_display.js"></script>
 		<!-- endbuild -->
 	</body>

@@ -1,5 +1,8 @@
-angular.module('myApp',['ngRoute','ngAnimate'])
-.config(['$routeProvider','$locationProvider',function($routeProvider, $locationProvider){
+angular.module('myApp',[
+        'ngRoute',
+        'ngAnimate'
+])
+.config(['$routeProvider','$locationProvider','$httpProvider',function($routeProvider, $locationProvider, $httpProvider){
 
         $routeProvider
         .when('/', {
@@ -32,14 +35,17 @@ angular.module('myApp',['ngRoute','ngAnimate'])
                         }]
                 }
         })
-        .when('/about', {
-                templateUrl: 'components/about/about.html',
-                controller: 'AboutCtrl'
+        .when('/flickr', {
+                templateUrl: 'components/flickr/flickr.html',
+                controller: 'FlickrCtrl'
         })
         .otherwise({
         	redirectTo:'/'
         })
+
+
         $locationProvider.html5Mode(true);
+
 }])
 .run(['$rootScope', function($rootScope){
 

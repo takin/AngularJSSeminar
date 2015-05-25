@@ -1,0 +1,21 @@
+<div class="row">
+	<form name="flickrForm" ng-submit="search()" class="form-inline" novalidate>
+		<fieldset>
+		  <div ng-class="{'form-group': true,'has-success' : flickrForm.searchTerm.$valid}">
+		    <div class="col-lg-5">
+		      <input ng-model="searchTerm" ng-pattern="/^[a-zA-Z]{3}[a-zA-Z]+$/" type="text" name="searchTerm" placeholder="Search Photos..." class="form-control">
+		    </div>
+		  </div>
+		  <button type="submit" class="btn btn-success">Add Product</button>
+		</fieldset>
+	</form>
+</div>
+<div class="row" class="fade-animation" ng-if="isFound">
+	<div class="col-lg-12" style="text-align:center;padding:20px 0;">
+	Found <span class="label label-danger">{{totalFound}}</span> photos about <span class="label label-success">{{ textToSearch }}</span>
+	</div>
+</div>
+
+<div class="row" ng-if="photos.length > 0">
+	<div my-thumbnail="photo" class="flickr-animation" ng-repeat="photo in photos">{{photo.title}}</div>
+</div>

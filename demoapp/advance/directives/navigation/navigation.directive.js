@@ -8,7 +8,7 @@ angular.module('myApp')
 			scope.menus = [
 				{link:'products', name:'Products'},
 				{link:'customers', name:'Customers'},
-				{link:'about', name:'About Us'}
+				{link:'flickr', name:'Flickr Service'}
 			];
 		}
 	}

@@ -1,6 +1,21 @@
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
   display: none !important;
 }
+
+.show-animation.ng-enter {
+	-webkit-animation:bounceIn .5s;
+}
+
+.fade-animation{
+	display: block;
+	position: relative;
+}
+
+.fade-animation.ng-enter{
+	-webkit-animation: fadeIn 1s;
+	animation: fadeIn 1s;
+}
+
 .my-container {
 	margin: 0 50px;
 }
@@ -10,7 +25,7 @@
 .product-item-body{
 	height: 150px;
 }
-.anime-list-up{
+.anime-list-up,.flickr-animation{
 	display: block;
 	position: relative;
 	z-index:0;
@@ -21,14 +36,23 @@
 	animation: hinge 2s;
 	position: absolute;
 	z-index: 1;
-	width: 100%;
+	width: 90%;
+}
+
+.flickr-animation.ng-leave{
+	-webkit-animation:fadeOutLeft 1.5s;
+	animation:fadeOutLeft 1.5s;
 }
 
 .anime-list-up.ng-enter{
 	-webkit-animation: bounceIn 1s;
 	animation: bounceIn 1s;
 }
-.anime-list-up.ng-enter-stagger,.anime-list-up.ng-leave-stagger{
+.flickr-animation.ng-enter{
+	-webkit-animation: bounceIn 1.5s;
+	animation: bounceIn 1.5s;
+}
+.anime-list-up.ng-enter-stagger,.anime-list-up.ng-leave-stagger,.flickr-animation.ng-enter-stagger{
 	-webkit-animation-delay: .2s;
 	animation-delay: .2s;
 }
@@ -50,8 +74,9 @@
 }
 
 .animation.ng-leave { 
-	-webkit-animation: fadeOutLeft 1.5s;
-	animation: fadeOutLeft 1.5s;
+	-webkit-animation: fadeOutLeft 2s;
+	animation: fadeOutLeft 2s;
 	z-index: 1;
+	width: 90%;
 	position: absolute;
-} 
+}

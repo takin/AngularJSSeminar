@@ -1,6 +1,6 @@
 (function(r,io){
 
-	var socket = io.connect("http://192.168.43.211:8000");
+	// var socket = io.connect("http://192.168.43.211:8000");
 	
 	var raw = document.getElementsByClassName('slides')[0].children;
 	var slides = [];
@@ -37,7 +37,7 @@
 	};
 
 	function listener(event){
-		socket.emit('slidechanged', buildData());
+		// socket.emit('slidechanged', buildData());
 	};
 
 	r.initialize({
@@ -50,7 +50,7 @@
 	});
 
 	r.addEventListener('ready', function(event){
-		socket.emit('ready', buildData());
+		// socket.emit('ready', buildData());
 	});
 
 	r.addEventListener('slidechanged', listener);

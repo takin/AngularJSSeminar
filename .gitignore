@@ -1,3 +1,4 @@
 slide/node_modules/*
+slide/bower_components/*
 demoapp/advance/Grunt*.js
 demoapp/advance/dist/*

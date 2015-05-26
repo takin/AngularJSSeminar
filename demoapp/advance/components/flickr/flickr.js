@@ -1,8 +1,9 @@
 angular.module('myApp')
-.controller('FlickrCtrl', ['$scope', '$rootScope','FlickrService', function($scope,$rootScope,FlickrService){
+.controller('FlickrCtrl', ['$scope', '$rootScope','FlickrService','getRandomImages', function($scope,$rootScope,FlickrService, getRandomImages){
 	$rootScope.title = 'Flickr Photo Search';
 
-	$scope.photos = [];
+	$scope.photos = getRandomImages.data.photos.photo;
+
 	$scope.isFound = false;
 
 	$scope.search = function(){

@@ -1,5 +1,5 @@
 angular.module('myApp')
-.controller('ProductsCtrl', ['$scope','$rootScope','products','$location','$timeout', function($scope, $rootScope, products, $location, $timeout){
+.controller('ProductsCtrl', ['$scope','$rootScope','products', function($scope, $rootScope, products){
 	$rootScope.title = 'Daftar Produk';
 	$scope.product = {
 		panelClass: 'info'

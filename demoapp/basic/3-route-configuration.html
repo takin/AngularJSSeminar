@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp"> <!-- tell the DOM to response to this module -->
+<head>
+	<meta charset="UTF-8">
+	<title>Membuat Module</title>
+
+	<script src="lib/angular.min.js"></script>
+	<script src="lib/angular-route.min.js"></script>
+	<script>
+		// lakukan instansiasi modul
+		angular.module('myApp',['ngRoute']);
+		
+		// panggil modul
+		var app = angular.module('myApp');
+
+		// proses pembuatan route dilakukan di dalam modul config
+		// adapun service yang dibutuhkan untuk membuat routing 
+		// adalah $routeProvider. Untuk itu kita inject service
+		// tersebut pada parameter callback modul config
+		app.config(function($routeProvider){
+
+			// proses routing dilakukan dengan memanggil method when()
+			// yang terdapat pada service $routeProvider
+			// method when membutuhkan 2 parameter, yang pertama adalah
+			// alamat route (alamat ini adalah alamat relatif terhadap domain)
+			// sedangkan yang kedua adalah Object yang mendefinisikan 
+			// template dll
+			// configurasi untuk halaman home
+			$routeProvider.when('/', {
+				template: '<div> Hello World</div>'
+			})
+			// routing dapat dilakukan dengan cara method chain
+			.when('/posts',{
+				// template dapat dipanggil dengan cara absolute maupun relative path
+				// jika menggunakan relative path, maka path relatif terhadap
+				// lokasi file javascript route
+				// dalam kasus ini karena diincludekan pada 3-route-configuration.html maka
+				// path relatif terhadapt file 3-route-configuration.html
+				templateUrl: 'views/posts.html',
+				controller: 'PostCtrl'
+			})
+			.when('/post/:id', {
+				templateUrl: 'views/single_post.html',
+				controller: 'SinglePostCtrl'
+			});
+
+			// jika alamat url tidak ditemukan, maka kita dapat membuat redirect 
+			// ke halaman tertentu yang kita inginkan
+			$routeProvider.otherwise({
+				redirectTo: '/'
+			});
+		});
+	</script>
+
+	<!-- jika script controller diletakkan di dalam file terpisah
+	 	 maka file yang berisicontroller harus di load setelah script
+		 routing di load terlebih dahulu, jika tidak maka controller 
+		 tidak akan dikenali -->
+	<script src="app/controller.js"></script>
+
+</head>
+<body>
+	<ng-view></ng-view>
+</body>
+</html>

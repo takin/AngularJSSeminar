@@ -1,0 +1,6 @@
+<div ng-repeat="blog in posts">
+	<h1><a href="#/post/{{ blog.id }}">{{ blog.title }}</a></h1>
+	<h3>{{ blog.author }}</h3>
+	<h3>{{ blog.date }}</h3>
+	<p>{{ blog.content }}</p>
+</div>

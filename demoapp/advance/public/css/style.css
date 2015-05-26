@@ -35,6 +35,8 @@
 	-webkit-animation: hinge 2s;
 	animation: hinge 2s;
 	position: absolute;
+	top: inherit;
+	left: inherit;
 	z-index: 1;
 	width: 90%;
 }

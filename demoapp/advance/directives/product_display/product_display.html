@@ -1,9 +1,9 @@
-<div class="col-sm-{{ width }}">
-	<div class="panel {{ 'panel-' + pc }}">
+<div class="col-sm-{{ options.panelWidth }}">
+	<div class="panel {{ 'panel-' + product.panelClass }}">
 	  <div class="panel-heading">
-	  	<a href="product/{{product.id}}" ng-if="isLink">{{ product.name }}</a>
-	  	<span ng-if="!isLink">{{ product.name }}</span>
-	  	<div class="pull-right"><a href="" ng-click="remove()">x</a></div>
+	  	<a href="product/{{product.id}}" ng-if="options.isLink">{{ product.name }}</a>
+	  	<span ng-if="!options.isLink">{{ product.name }}</span>
+	  	<div class="pull-right" ng-transclude></div>
 	  </div>
 	  <div class="panel-body product-item-body">
 	    <p>{{ product.price | currency:"Rp. ":0}}</p>

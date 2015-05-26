@@ -1,0 +1,34 @@
+
+.arc-module {
+    background-color: brown;
+    border: 1px solid #efefef;
+    padding: 20px;
+    color: white;
+}
+img{
+	border-style: none;
+	border: none;
+}
+#root-scope{
+	background-color: #fe9090;
+	padding: 10px;
+	color: #fff;
+}
+#first-child-scope{
+	background-color: #acacac;
+	width: 48%;
+	margin: 5px;
+	float: left;
+}
+#second-child-scope{
+	background-color: #339999;
+	width: 48%;
+	margin: 5px;
+	float: left;
+	height: 198px;
+}
+#child-first-child-scope{
+	background-color: #4f5c5c;
+	margin: 10px;
+	height: 100px;
+}

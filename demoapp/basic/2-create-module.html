@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp"> <!-- tell the DOM to response to this module -->
+<head>
+	<meta charset="UTF-8">
+	<title>Membuat Module</title>
+	
+	<!-- 
+		load semua script yang dibutuhkan
+		yang perlu diperhatikan adalah, angularjs harus di load paling awal
+		sebelum modul dependency lainnya, jika tidak, maka modul/service
+		tidak akan dikenali oleh angular
+	-->
+	<script src="lib/angular.min.js"></script>
+	<script src="lib/angular-animate.min.js"></script>
+	<script>
+		// initialize the module
+		// di dalam [] dapat diisikan dengan modul, service 
+		// yang merupakan dependency dari modul yang akan kita bikin
+		// misalnya kita membutuhkan modul animate
+		angular.module('myApp',['ngAnimate']);
+
+		// panggil module yang telah dibuat dengan menggunakan
+		// cara berikut:
+		// Perhatikan: tidak ada tanda [] di akhir, ini menandakan 
+		// getter
+		var app = angular.module('myApp');
+
+	</script>
+
+</head>
+<body>
+	
+</body>
+</html>

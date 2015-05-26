@@ -2,22 +2,27 @@ angular.module('myApp')
 .directive('productDisplay', function(){
 	return {
 		restirction: 'E',
+		transclude: true,
 		scope:{
-			product: '=info',
-			width: '=panelWidth',
-			pc: '=panelClass',
-			remove: '&onRemove',
-			isLink:'@'
+			product: '=productData'
 		},
 		templateUrl: 'directives/product_display/product_display.html',
 		link: function(scope,element,attrs){
 
+			var options = scope.$eval(attrs.options);
+
+			scope.options = options;
+
 			element.on('mouseenter', function(e){
-				element.children().addClass('animated swing');
+				if(options.animated){
+					element.children().addClass('animated rubberBand');
+				}
 			});
 
 			element.on('mouseleave', function(){
-				element.children().removeClass('animated swing');
+				if(options.animated){
+					element.children().removeClass('animated rubberBand');
+				}
 			});
 		}
 	}

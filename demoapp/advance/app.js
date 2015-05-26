@@ -2,7 +2,7 @@ angular.module('myApp',[
         'ngRoute',
         'ngAnimate'
 ])
-.config(['$routeProvider','$locationProvider','$httpProvider',function($routeProvider, $locationProvider, $httpProvider){
+.config(['$routeProvider','$locationProvider',function($routeProvider, $locationProvider){
 
         $routeProvider
         .when('/', {
@@ -13,10 +13,8 @@ angular.module('myApp',[
                 templateUrl: 'components/products/products.html',
                 controller: 'ProductsCtrl',
                 resolve: {
-                        products: ['Products','$timeout',function(Products,$timeout){
-                                // return $timeout(function(){
-                                        return Products.getAll();
-                                // },3000);
+                        products: ['Products',function(Products){
+                                return Products.getAll();
                         }]
                 }
         })
@@ -37,7 +35,12 @@ angular.module('myApp',[
         })
         .when('/flickr', {
                 templateUrl: 'components/flickr/flickr.html',
-                controller: 'FlickrCtrl'
+                controller: 'FlickrCtrl',
+                resolve:{
+                        getRandomImages: ['FlickrService',function(FlickrService){
+                                return FlickrService.search();
+                        }]
+                }
         })
         .otherwise({
         	redirectTo:'/'

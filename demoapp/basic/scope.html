@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" ng-app='myApp'>
+<head>
+	<meta charset="UTF-8">
+	<title>Memahami Scope</title>
+	<script type="text/javascript" src="angular.min.js"></script>
+</head>
+<body>
+	<div ng-controller="FirstController">
+		Hello, {{ greet1 }}
+	</div>
+	<div ng-controller="SecondController">
+		Hello, {{ greet2 }}
+	</div>
+
+	<script type="text/javascript">
+		angular.module('myApp',[])
+		.controller('SecondController', function($scope,$rootScope){
+			$rootScope.greet1 = 'Tumini';
+			$scope.greet2 = 'tukijan';
+		})
+		.controller('FirstController', function($rootScope){
+			$rootScope.greet1 = 'Syamsul';
+		});
+	</script>
+</body>
+</html>

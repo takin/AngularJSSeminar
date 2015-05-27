@@ -15,6 +15,6 @@
 		</div>
 		</div>
 		<product-display product-data="product" options="{panelWidth:4, isLink:true, animated:true}" class="anime-list-up" ng-repeat="product in products | filter:filterProduk">
-			<a href="" ng-click="remove()">x</a>
+			<a href="" ng-click="removeProduct($index)">x</a>
 		</product-display>
 </div>

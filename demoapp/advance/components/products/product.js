@@ -12,7 +12,7 @@ angular.module('myApp')
 
 	$scope.products = products.data;
 
-	$scope.onRemove = function(index){
+	$scope.removeProduct = function(index){
 		$scope.products.splice(index,1);
 	}
 

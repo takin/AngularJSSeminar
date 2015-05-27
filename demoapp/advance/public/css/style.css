@@ -6,14 +6,20 @@
 	-webkit-animation:bounceIn .5s;
 }
 
-.fade-animation{
+.if-animation{
 	display: block;
 	position: relative;
+	text-align:center;
 }
 
-.fade-animation.ng-enter{
-	-webkit-animation: fadeIn 1s;
-	animation: fadeIn 1s;
+.if-animation.ng-enter{
+	-webkit-animation: fadeInDown 1s;
+	animation: fadeInDown 1s;
+}
+
+.if-animation.ng-leave{
+	-webkit-animation: fadeOutUp 1s;
+	animation: fadeOutUp 1s;
 }
 
 .my-container {

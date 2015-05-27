@@ -7,7 +7,7 @@
   </div>
   <div ng-class="{'form-group': true, 'has-feedback': true, 'has-success' : myForm.price.$valid, 'has-error':myForm.price.$error.pattern}">
     <div class="col-lg-3">
-      <input required ng-model="product.price" ng-pattern="/^[1-9]{1}[0-9]{3,4}$/" type="text" name="price" placeholder="Product price" class="form-control">
+      <input required ng-model="product.price" ng-pattern="/^[1-9]{1}[0-9]{3,6}$/" type="text" name="price" placeholder="Product price" class="form-control">
     </div>
   </div>
   <div ng-class="{'form-group': true,'has-success' : myForm.description.$valid}">
@@ -30,6 +30,6 @@
       <input type="radio" ng-model="product.panelClass" value="success"> Hijau
     </label>
   </div>
-  <button type="submit" ng-disabled="myForm.$invalid" class="btn btn-success">Add Product</button>
+  <button type="submit" ng-disabled="myForm.$invalid || !myForm.$dirty" class="btn btn-success">Add Product</button>
 </fieldset>
 </form>

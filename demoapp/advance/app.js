@@ -52,6 +52,8 @@ angular.module('myApp',[
 }])
 .run(['$rootScope', function($rootScope){
 
+        $rootScope.title = 'AngularJS Demo App';
+
         $rootScope.$on('$routeChangeStart', function(){
                 $rootScope.isLoading = true;
         });

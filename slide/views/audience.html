@@ -9,16 +9,18 @@
 </head>
 <body>
 			
-		<div class="reveal">
+	<div class="reveal">
 		<div class="slides">
 			<section>
-				<h3>Build Awesome and Fast Web App Using AngularJS</h3>
+				<h2>Build Awesome and Fast Web App Using AngularJS</h2>
 				<p>&nbsp;</p>
 				<img border="0" src="images/logo-wide.png" noboarder alt="Angular logo">
 			</section>
 			<section>
 				<img src="images/me.jpg" height="300" alt="">
 				<h3>Syamsul Muttaqin</h3>
+				<p>lombok.oc@gmail.com</p>
+				<p>@takin_46</p>
 				<p>Chief Technology Officer of PlayfulDev</p>
 				<p>Developer of Kuliner Yogyakarta</p>
 			</section>
@@ -30,24 +32,16 @@
 				<p>~ Pengenalan Fitur Utama AngularJS</p>
 				<p>~ Demo Aplikasi</p>
 			</section>
-			<section data-transition="fade">
-				<section>
-					<img class="stretch" src="images/thinking.jpg" alt="">
-				</section>
-				<section>
-					<img class="stretch" src="images/i-know-angular.jpg" alt="">
-				</section>
-			</section>
 
 			<section>
-				<h2>thin vs thick server</h2>
+				<h2>thin vs thick client</h2>
 				<img class="stretch" src="images/thin-server.png" alt="">
-				<p class="fragment">Delivery data pada thin server menggunakan JSON/XML</p>
-				<p class="fragment">Delivery data pada thick server menggunakan HTML</p>
+				<p class="fragment">Delivery data pada thin client menggunakan HTML</p>
+				<p class="fragment">Delivery data pada thick client menggunakan XML/JSON</p>
 			</section>
 
 			<section>
-				<h2>Tantangan thin server</h2>
+				<h2>Tantangan thick client</h2>
 				<ul>
 					<li>Manage UI State</li>
 					<li>Route system</li>
@@ -55,30 +49,44 @@
 					<li>DOM Manipulation</li>
 					<li>Cache management</li>
 					<li>...</li>
-					<p class="fragment">Semua ditangani oleh client (browser)</p>
 				</ul>
 			</section>
 
 			<section data-transition="fade" tagcloud large>
-				<span tagcloud-weight="8">jQuery</span>
+				<span tagcloud-weight="7">jQuery</span>
 				<span tagcloud-weight="10">AngularJS</span>
 				<span tagcloud-weight="6">Sencha</span>
-				<br/>
+				<!-- <br/> -->
 				<span tagcloud-weight="4">EmberJS</span>
 				<span tagcloud-weight="7">jQuery Mobile</span>
 				<span tagcloud-weight="8">ReactJS</span>
-				<span tagcloud-weight="8">BackboneJS</span>
+				<span tagcloud-weight="6">BackboneJS</span>
 				<span tagcloud-weight="5">Sencha Touch</span>
 				<span tagcloud-weight="4">KnockoutJS</span>
 			</section>
+			
+			<section data-transition="fade">
+				<section>
+					<h2>AngularJS...</h2>
+				</section>
+				<section>
+					<img class="stretch" src="images/thinking.jpg" alt="">
+				</section>
+				<section>
+					<img src="images/confused.jpg" class="stretch" alt="">
+				</section>
+				<section>
+					<img class="stretch" src="images/i-know-angular.jpg" alt="">
+				</section>
+			</section>
 
 			<section data-transition="fade">
-				<h2>AngularJS ??</h2>
+				<h2>AngularJS is...</h2>
 				<p>&nbsp;</p>
 				<ul>
 					<li class="fragment">Open Source Javascript Framework</li>
 					<li class="fragment">Maintained by Google</li>
-					<li class="fragment">AngularJS is not a library</li>
+					<li class="fragment">Not a library</li>
 					<li class="fragment">AngularJS != jQuery</li>
 				</ul>
 				<p>&nbsp;</p>
@@ -88,11 +96,11 @@
 				<img class="stretch" src="images/angular-bussines-web-app.jpg" alt="">
 			</section>
 			<section data-transition="zoom-in slide-in">
-				<h2>Kenapa Angular ??</h2>
+				<h2>Why Angular ??</h2>
 				<p>&nbsp;</p>
 				<ul>
 					<li class="fragment" data-fragment-index="1">
-						Single Page Application (SPA)</li>
+						Full-featured Single Page Application (SPA) framework</li>
 					<li class="fragment" data-fragment-index="2">
 						<span class="fragment highlight-red" data-fragment-index="9">
 							Dependency Injection system
@@ -109,7 +117,7 @@
                     	</span>
                     </li>
 					<li class="fragment" data-fragment-index="5">
-						Memiliki fitur yang super lengkap
+						Clear code separation
 					</li>
 					<li class="fragment" data-fragment-index="6">
 						Templating menggunakan HTML (plus mustache-like data binding)
@@ -138,6 +146,12 @@
 			</section>
 
 			<section>
+				<h2>angularjs version</h2>
+				<p class="fragment">"Current stable version is 1.4.0"</p>
+				<p class="fragment">"AngularJS 2.0 is still is alpha version"</p>
+			</section>
+
+			<section>
 				<h2>Single Page Application</h2>
 				<img class="stretch" src="images/spa-model.png" alt="">
 			</section>
@@ -162,13 +176,96 @@
 			<section>
 				<h2>Modul</h2>
 				<img src="images/angular-module.png" alt="">
+<pre class="fragment"><code><!-- <html ng-app="myApp"> --></code></pre>
 <pre class="fragment"><code class="javascript">// create a new module
 angular.module('myApp',['ngRoute','ngAnimate']);
 
 /* to invoke the module, just use */
 var app = angular.module('myApp');
 </code></pre>
-<pre class="fragment"><code><!-- <html ng-app="myApp"> --></code></pre>
+			</section>
+
+			<section>
+				<h2>data binding</h2>
+				<p class="fragment">
+					"Proses komunikasi antara user interface dengan application logic"
+				</p>
+			</section>
+
+			<section>
+				<section>
+					<img class="stretch" src="images/2-way-data-binding.png" alt="">
+				</section>
+				<section>
+				<p class="fragment">
+					"Ketika terjadi perubahan data pada view (HTML Template), maka data pada controller juga otomatis akan berubah"
+				</p>
+<pre><code>app.controller("HelloCtrl", function($scope){
+	/* initialize 'myModel' value */
+	$scope.myModel = "Hello world";
+});
+</code></pre>			
+<pre><code><input type="text" ng-model="myModel"></code></pre>
+				</section>
+			</section>
+
+			<section>
+				<h2>directives</h2>
+				<section>
+					<p class="fragment">
+						"Directive merupakan custom html tag yang berfungsi sebagai node dalam DOM yang nantinya akan digantikan oleh template HTML"
+					</p>
+					<p class="fragment">
+						"Directive merupakan fitur andalan dari AngularJS"
+					</p>
+				</section>
+				<section>
+<pre><code>//html code
+...
+<div ng-view></div>
+<ul>
+	<li ng-repeat="user in users">{{ user.name }}</li>
+</ul>
+<div ng-if="!user.loggedIn">You need to login first</div>
+...	
+</code></pre>
+				</section>
+			</section>
+
+			<section>
+				<h2>Custom Directive</h2>
+				<section>
+				<p>&nbsp;</p>
+<pre><code><div class="greeting">
+	<my-directive></my-directive>
+</div>
+</code></pre>
+<pre><code>angular.module('myApp').directive('myDirective', function(){
+	return {
+		restrict: 'AEC',
+		scope:{
+		  insideData1 : '=', /* two way communication */
+		  insideData3 : '@', /* top-down communication */
+		  insideData4 : '&'  /* kebalikan dari @ */
+		},
+		template:'<div><h1>Hello World</h1></div>',
+		compile: function(element, attributes){},
+		link: function(scope, element, attributes){}
+	}
+});
+</code></pre>
+				</section>
+				<section>
+<pre><code><div class="greeting">
+	<my-directive></my-directive>
+</div>
+</code></pre>
+<pre><code><div class="greeting">
+	<div><h1>Hello World</h1></div>
+</div>
+	
+</code></pre>
+				</section>
 			</section>
 
 			<section>
@@ -182,7 +279,7 @@ var app = angular.module('myApp');
 					</p>
 				</section>
 				<section>
-<pre><code data-trim class="">// create a new module
+<pre><code data-trim>// create a new module
 var app = angular.module('myApp',['ngRoute']);
 
 /* konfigurasi routing */
@@ -212,23 +309,12 @@ app.config(function($routeProvider){
   });
 });
 </code></pre>
-				</section>	
-			</section>
-
-			<section>
-				<section>
-					<img class="stretch" src="images/2-way-data-binding.png" alt="">
-				</section>
-				<section>
-				<p class="fragment">
-					"Ketika terjadi perubahan data pada view (HTML Template), maka data pada controller juga otomatis akan berubah"
-				</p>
-<pre><code>app.controller("HelloCtrl", function($scope){
-	/* initialize 'myModel' value */
-	$scope.myModel = "Hello world";
-});
-</code></pre>			
-<pre><code><input type="text" ng-model="myModel"></code></pre>
+<pre><code>...
+<div class="container">
+	<ng-view></ng-view>
+</div>
+...	
+</code></pre>
 				</section>
 			</section>
 				
@@ -239,7 +325,8 @@ app.config(function($routeProvider){
 					<p class="fragment">"Scope berisi object model"</p>
 				</section>
 				<section>
-<pre><code><div>
+<pre><code>...
+<div>
 	<div ng-controller="FirstController">
 		Hello, {{ greet1 }}
 	</div>
@@ -247,6 +334,7 @@ app.config(function($routeProvider){
 		Hello, <span ng-bind="greet2"></span>
 	</div>
 </div>
+...
 // javascript code
 app.controller('FirstController', function($rootScope){
 	$rootScope.greet1 = "Syamsul";
@@ -293,53 +381,6 @@ app.controller('FirstController', function($rootScope){
 		});
 	});
 </code></pre>
-			</section>
-
-			<section>
-				<h2>Directive</h2>
-				<section>
-					<p>
-						"Directive merupakan custom html tag yang berfungsi sebagai node dalam DOM yang nantinya akan digantikan oleh template HTML"
-					</p>
-					<p class="fragment">
-						"Directive merupakan fitur andalan dari AngularJS"
-					</p>
-				</section>
-				<section>
-				<p>&nbsp;</p>
-<pre><code><div class="greeting">
-	<my-directive></my-directive>
-</div>
-</code></pre>
-<pre><code>angular.module('myApp')
-.directive('myDirective', function(){
-return {
-	restrict: 'AEC',
-	scope:{
-		insideData1 : '=', /* two way communication */
-		insideData3 : '@', /* top-down communication */
-		insideData4 : '&'  /* kebalikan dari @ */
-	},
-	
-	template:'<div><h1>Hello World</h1></div>',
-	// templateUrl: 'directive/template.html'
-
-	compile: function(element, attributes){
-		/* method yang umumnya digunakan */
-		/* untuk memanipulasi DOM Template */
-		/* karena method ini dipanggil sebelum proses */
-		/* rendring di layar (sebelum linking phase) */
-	},
-	
-	link: function(scope, element, attributes){
-		/* method yang digunakan untuk melakukan manipulasi */
-		/* data dari template karena fungsi ini dipanggil */
-		/* sesaat sebelum DOM di render */
-	}
-}
-});
-</code></pre>
-				</section>
 			</section>
 
 			<section>

@@ -1,59 +1,33 @@
 (function(r,io){
 
-	var socket = io.connect("http://localhost:8000");
-	
-	var raw = document.getElementsByClassName('slides')[0].children;
-	var slides = [];
+	'use strict';
 
-	for (var i = raw.length - 1; i >= 0; i--) {
-		slides[i] = raw[i].innerHTML;
-	};
+	var socket = io.connect("http://192.168.43.211:8000");
+	
 
 	function getNextSlide(){
 		
-		var slideData = {};
-
-		if(slides.length > r.getIndices().h + 1){
-			slideData.slide = (r.getIndices().f === -1) ? slides[r.getIndices().h] : slides[r.getIndices().h + 1];
-			slideData.position = {
-				h: r.getIndices().h,
-				v: r.getIndices().v,
-				f: r.getIndices().f || 0	
-			}
-		}
-
-		return slideData;
-	};
-
-	function buildData(){
 		return {
-			slides: slides,
-			position: {
-				h: r.getIndices().h,
-				v: r.getIndices().v,
-				f: r.getIndices().f || 0
-			}
-		};
+			h: r.getIndices().h,
+			v: r.getIndices().v,
+			f: r.getIndices().f || 0
+		}
 	};
 
 	function listener(event){
-		socket.emit('slidechanged',buildData().position);
-		// socket.emit('slidechanged', buildData());
+		socket.emit('slidechanged',getNextSlide());
 	};
 
 	r.initialize({
 		transition:'convex',
 		touch:true,
-		height: 700,
+		history:true,
+		height: 800,
 		hideAddressBar: true,
 		dependencies: [
 			{ src: 'components/reveal.js/plugin/tagcloud/tagcloud.js'},
 			{ src: 'components/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
 		]
-	});
-
-	r.addEventListener('ready', function(event){
-		// socket.emit('ready', buildData());
 	});
 
 	r.addEventListener('slidechanged', listener);

@@ -1,6 +1,6 @@
 (function(r,io){
 
-	// var socket = io.connect("http://192.168.43.211:8000");
+	var socket = io.connect("http://localhost:8000");
 	
 	var raw = document.getElementsByClassName('slides')[0].children;
 	var slides = [];
@@ -37,14 +37,17 @@
 	};
 
 	function listener(event){
+		socket.emit('slidechanged',buildData().position);
 		// socket.emit('slidechanged', buildData());
 	};
 
 	r.initialize({
-		transition:'default',
+		transition:'convex',
 		touch:true,
+		height: 700,
 		hideAddressBar: true,
 		dependencies: [
+			{ src: 'components/reveal.js/plugin/tagcloud/tagcloud.js'},
 			{ src: 'components/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
 		]
 	});

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+	<meta charset="UTF-8">
+	<title>Controller as</title>
+	<script src="lib/angular.min.js"></script>
+	<script>
+	angular.module('myApp',[])
+	.controller('MainCtrl', function(){
+		this.hello = 'Hello World';
+	})
+	</script>
+</head>
+<body ng-controller="MainCtrl as main">
+	<div>
+		{{main.hello}}
+	</div>
+</body>
+</html>

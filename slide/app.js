@@ -17,29 +17,29 @@ app.get('/presenter', function(req, res){
 });
 
 io.on('connection', function(socket){
-	var sf = fs.readFileSync(slideFile);
-	var slides = sf.length === 0 ? 0 : JSON.parse(sf);
+	// var sf = fs.readFileSync(slideFile);
+	// var slides = sf.length === 0 ? 0 : JSON.parse(sf);
 
-	var pf = fs.readFileSync(positionFile);
-	var position = pf.length === 0 ? 0 : JSON.parse(pf);
+	// var pf = fs.readFileSync(positionFile);
+	// var position = pf.length === 0 ? 0 : JSON.parse(pf);
 
-	socket.emit('first',{slides:slides, position:position});
+	// socket.emit('first',{slides:slides, position:position});
 
-	socket.on('ready', function(data){
-		fs.writeFile(slideFile, JSON.stringify(data.slides), function(err){
-			if(err) throw err;
-		});
+	// socket.on('ready', function(data){
+	// 	fs.writeFile(slideFile, JSON.stringify(data.slides), function(err){
+	// 		if(err) throw err;
+	// 	});
 
-		fs.writeFile(positionFile, JSON.stringify(data.position), function(err){
-			if(err) throw err;
-		});
-	});
+	// 	fs.writeFile(positionFile, JSON.stringify(data.position), function(err){
+	// 		if(err) throw err;
+	// 	});
+	// });
 
 	socket.on('slidechanged', function(data){
-		socket.broadcast.emit('slidechanged', data.position);
-		fs.writeFile(positionFile, JSON.stringify(data.position), function(err){
-			if(err) throw err;
-		});
+		socket.broadcast.emit('slidechanged', data);
+		// fs.writeFile(positionFile, JSON.stringify(data.position), function(err){
+		// 	if(err) throw err;
+		// });
 	});
 });
 

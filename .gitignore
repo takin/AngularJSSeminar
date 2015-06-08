@@ -4,3 +4,4 @@ demoapp/advance/Grunt*.js
 demoapp/advance/dist/*
 demoapp/advance/bower_components/*
 demoapp/advance/node_modules/*
+.fuse*

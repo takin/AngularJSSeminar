@@ -1,9 +1,0 @@
-{
-  "generator-reveal": {
-    "presentationTitle": "testing",
-    "packageVersion": "0.0.0",
-    "useSass": false,
-    "deployToGithubPages": false,
-    "revealTheme": "default"
-  }
-}

@@ -9,10 +9,7 @@ span.clouditem {
     padding: 20px;
     color: white;
 }
-img{
-	border-style: none;
-	border: none;
-}
+.reveal section img { background:none; border:none; box-shadow:none; }
 #root-scope{
 	background-color: #fe9090;
 	padding: 10px;

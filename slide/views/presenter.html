@@ -13,8 +13,7 @@
 		<div class="slides">
 			<section>
 				<h2>Build Awesome and Fast Web App Using AngularJS</h2>
-				<p>&nbsp;</p>
-				<img border="0" src="images/logo-wide.png" noboarder alt="Angular logo">
+				<img width="400" src="images/angular-logo.png" noboarder alt="Angular logo">
 			</section>
 			<section>
 				<img src="images/me.jpg" height="300" alt="">
@@ -80,10 +79,10 @@
 					<h2>AngularJS...</h2>
 				</section>
 				<section>
-					<img class="stretch" src="images/thinking.jpg" alt="">
+					<img src="images/confused.jpg" class="stretch" alt="">
 				</section>
 				<section>
-					<img src="images/confused.jpg" class="stretch" alt="">
+					<img class="stretch" src="images/thinking.jpg" alt="">
 				</section>
 				<section>
 					<img class="stretch" src="images/i-know-angular.jpg" alt="">
@@ -94,10 +93,10 @@
 				<h2>AngularJS is...</h2>
 				<p>&nbsp;</p>
 				<ul>
-					<li class="fragment">Open Source Javascript Framework</li>
-					<li class="fragment">Maintained by Google</li>
 					<li class="fragment">Not a library</li>
 					<li class="fragment">AngularJS != jQuery</li>
+					<li class="fragment">Open Source Javascript MV* Framework</li>
+					<li class="fragment">Maintained by Google</li>
 				</ul>
 				<p>&nbsp;</p>
 				<p class="fragment">"Full-featured javascript SPA framework"</p>
@@ -139,10 +138,30 @@
 				</ul>
 			</section>
 			
+			<section>
+				<h1>AngularJS is SEO Friendly!</h1>
+			</section>
+			
+			<section>
+				<section>
+					<img class="stretch" src="images/surprised.jpg" alt="">
+					<h3>SEO Friendly ???</h3>
+				</section>
+				<section>
+					<img class="stretch" src="images/brad-green-quote.png" alt="">
+				</section>
+			</section>
+
+			<section>
+				<h2>angularjs version</h2>
+				<p class="fragment">"Current stable version is 1.4.0"</p>
+				<p class="fragment">"AngularJS 2.0 is still is alpha version"</p>
+			</section>
+			
 			<section data-transition="fade">
 				<section>
 					<h2>Javascript ??</h2>
-					<img height="550" src="images/cry-baby-face.jpg" alt="">
+					<img class="fragment" height="550" src="images/cry-baby-face.jpg" alt="">
 				</section>
 				<section>
 					<img src="images/js-trends.png" alt="">
@@ -156,33 +175,16 @@
 			</section>
 
 			<section>
-				<h2>angularjs version</h2>
-				<p class="fragment">"Current stable version is 1.4.0"</p>
-				<p class="fragment">"AngularJS 2.0 is still is alpha version"</p>
-			</section>
-
-			<section>
 				<h2>Single Page Application</h2>
 				<img class="stretch" src="images/spa-model.png" alt="">
 			</section>
-
-			<section>
-				<h1>AngularJS is SEO Friendly!</h1>
-			</section>
-			<section>
-				<section>
-					<img class="stretch" src="images/surprised.jpg" alt="">
-					<h3>SEO Friendly ???</h3>
-				</section>
-				<section>
-					<img class="stretch" src="images/brad-green-quote.png" alt="">
-				</section>
-			</section>
+			
 			<section>
 				<h2>Arsitektur</h2>
 				<img class="stretch" src="images/angular-architecture.png" height="500" />
 				<p>*picture by Dan Wahlin</p>
 			</section>
+			
 			<section>
 				<h2>Modul</h2>
 				<img src="images/angular-module.png" alt="">
@@ -196,15 +198,38 @@ var app = angular.module('myApp');
 			</section>
 
 			<section>
+				<h2>dependency injection</h2>
+				<p class="fragment">
+					"Inject modul/service/filter yang diperlukan ke dalam modul"
+				</p>
+<pre class="fragment"><code>// inject module animasi dan route ke dalam app
+angular.module('myApp',['ngRoute','ngAnimate'])
+</code></pre>
+<pre class="fragment"><code>// inject $scope module ke dalam controller
+angular.module('myApp').controller('MyCtrl',function($scope){
+	// controller code goes here
+})
+</code></pre>
+<pre class="fragment"><code>// inject $htt service ke dalam service
+angular.module('myApp').factory('MyService',function($http){
+	// service code goes here
+})
+</code></pre>
+			</section>
+
+			<section>
 				<h2>data binding</h2>
 				<p class="fragment">
-					"Proses komunikasi antara user interface dengan application logic"
+					"Proses komunikasi antara user interface (Template) dengan application logic (Controller)"
+				</p>
+				<p class="fragment">
+					"binding dalam template (HTML) dilakukan dengan menggunakan {{  }}"
 				</p>
 			</section>
 
 			<section>
 				<section>
-					<img class="stretch" src="images/2-way-data-binding.png" alt="">
+					<img class="stretch" src="images/two-way-data-binding.png" alt="">
 				</section>
 				<section>
 				<p class="fragment">
@@ -220,16 +245,32 @@ var app = angular.module('myApp');
 			</section>
 
 			<section>
-				<h2>directives</h2>
-				<section>
+				<h2>Expression</h2>
+				<p class="fragment">
+					"Angular Expression merupakan kode <i>javascript-like</i> yang dapat dikenali dan di parsing oleh angularjs"
+				</p>
+				<p class="fragment">
+					"Expression umumnya digunakan dalam binding, namun dapat juga diletakkan di dalam element atau directive"
+				</p>
+<pre class="fragment"><code>...
+<div>1+2={{ 1 + 2 }}</div>
+<div ng-if="!user.isLoggedIn">{{ message }}</div>
+...
+</code></pre>
+			</section>
+
+			<section>
+				<h2>directive</h2>
 					<p class="fragment">
 						"Directive merupakan custom html tag yang berfungsi sebagai node dalam DOM yang nantinya akan digantikan oleh template HTML"
 					</p>
 					<p class="fragment">
 						"Directive merupakan fitur andalan dari AngularJS"
 					</p>
-				</section>
-				<section>
+			</section>
+			
+			<section>
+				<h2>directive</h2>
 <pre><code>//html code
 ...
 <div ng-view></div>
@@ -239,18 +280,15 @@ var app = angular.module('myApp');
 <div ng-if="!user.loggedIn">You need to login first</div>
 ...	
 </code></pre>
-				</section>
 			</section>
 
 			<section>
 				<h2>Custom Directive</h2>
-				<section>
-				<p>&nbsp;</p>
-<pre><code><div class="greeting">
+<pre class="fragment"><code><div class="greeting">
 	<my-directive></my-directive>
 </div>
 </code></pre>
-<pre><code>angular.module('myApp').directive('myDirective', function(){
+<pre class="fragment"><code>angular.module('myApp').directive('myDirective', function(){
 	return {
 		restrict: 'AEC',
 		scope:{
@@ -264,78 +302,29 @@ var app = angular.module('myApp');
 	}
 });
 </code></pre>
-				</section>
-				<section>
-<pre><code><div class="greeting">
+<pre class="fragment"><code><div class="greeting">
 	<my-directive></my-directive>
 </div>
 </code></pre>
-<pre><code><div class="greeting">
+<pre class="fragment"><code><div class="greeting">
 	<div><h1>Hello World</h1></div>
 </div>
 	
 </code></pre>
-				</section>
 			</section>
 
 			<section>
-				<h2>Router</h2>
-				<section>
-					<p>
-						"Router berfungsi untuk mengatur view mana yang akan ditampilkan di dalam ng-view sesuai dengan konfigurasi yang ditentukan"
+				<h2>Scope</h2>
+					<p class="fragment">
+						"Scope merupakan media penghubung antara view dengan controller"
 					</p>
 					<p class="fragment">
-						"Konfigurasi routing dilakukan dalam modul config dan dilakukan terhadap $routeProvider"
+						"Scope berisi object model"
 					</p>
-				</section>
-				<section>
-<pre><code data-trim>// create a new module
-var app = angular.module('myApp',['ngRoute']);
-
-/* konfigurasi routing */
-app.config(function($routeProvider){
-  $routeProvider
-  	.when('/',{
-	   template:'<h1>Hello World</h1>'
-	})
-	.when('/posts', {
-	   templateUrl:'views/posts.html',
-	   controller: 'PostCtrl'
-	})
-	.when('/post/:id',{
-	   templateUrl: 'views/single_post.html',
-	   controller:'SinglePostCtrl',
-	   resolve:{
-	      return {
-	      	getPost: function(BlogService, $routeParams){
-	      		return BlogService.getOne($routeParams.id);
-	      	}
-	      }
-	   }
-	});
-
-  $routeProvider.otherwise({
-	redirectTo: '/'
-  });
-});
-</code></pre>
-<pre><code>...
-<div class="container">
-	<ng-view></ng-view>
-</div>
-...	
-</code></pre>
-				</section>
 			</section>
-				
 			<section>
-				<h2>Memahami Scope</h2>
-				<section>
-					<p>"Scope merupakan media penghubung antara view dengan controller"</p>
-					<p class="fragment">"Scope berisi object model"</p>
-				</section>
-				<section>
-<pre><code>...
+				<h2>Scope</h2>
+<pre><code><!-- html code -->
 <div>
 	<div ng-controller="FirstController">
 		Hello, {{ greet1 }}
@@ -344,16 +333,17 @@ app.config(function($routeProvider){
 		Hello, <span ng-bind="greet2"></span>
 	</div>
 </div>
-...
-// javascript code
-app.controller('FirstController', function($rootScope){
+</code></pre>
+<pre class="fragment"><code>// javascript code
+angular.module('myApp')
+.controller('FirstController', function($rootScope){
 	$rootScope.greet1 = "Syamsul";
-}).controller('SecondController', function($scope,$rootScope){
+})
+.controller('SecondController', function($scope,$rootScope){
 	$rootScope.greet1 = "Sutinah";
 	$scope.greet2 = "Samijan";
 })
 </code></pre>
-				</section>
 			</section>
 
 			<section>
@@ -378,67 +368,188 @@ app.controller('FirstController', function($rootScope){
 
 			<section>
 				<h2>Controller</h2>
-				<p>"Controller merupakan application logic yang berfungsi untuk menjembatani data source dengan view"</p>
-<pre class="fragment"><code>angular.module('myApp')
-	.controller('MyController', function($scope,MyService){
-		/* set title model text */
-		$scope.title = "Welcome to My Blog";
+				<p class="fragment">"Controller merupakan application logic yang berfungsi untuk menjembatani data source dengan view"</p>
+<pre class="fragment"><code>// javascript code
+angular.module('myApp')
+.controller('MyController', function($scope,MyService){
+	
+	$scope.title = "Welcome to My Blog";
 
-		/* do some AJAX Request and assign the result */
-		/* when ready to the posts model */
-		MyService.getPosts().success(function(result){
-			$scope.posts = result.data;
-		});
+	MyService.getPosts().success(function(result){
+		$scope.posts = result.data;
 	});
+});
+</code></pre>
+			</section>
+
+			<section>
+				<h2>filter</h2>
+				<p class="fragment">
+					"Memanipulasi data di dalam template sebelum dirender di DOM"
+				</p>
+<pre class="fragment"><code><!-- html code -->
+<div class="container">
+	{{ data.harga | currency }}
+</div>
+</code></pre>
+			</section>
+
+			<section>
+				<h2>service</h2>
+				<section>
+					<p class="fragment">
+						"Object yang dapat diinjeksikan ke dalam modul dengan menggunakan Dependency Injection"
+					</p>
+					<p class="fragment">
+						"Service hanya akan di-instansiasi ketika service yang bersangkutan dipanggil"
+					</p>
+					<p class="fragment">
+						"Service dapat di-inject ke dalam service lain"
+					</p>
+					<p class="fragment">
+						"Umumnya digunakan sebagai modul untuk berkomunikasi dengan data source"
+					</p>
+<pre class="fragment"><code>// javascript code
+angular.module('myApp')
+.controller('MyCtrl', function($http, $scope, MyService){
+	$http.get('/users').success(function(users){
+		$scope.users = users;
+	});
+});
+</code></pre>
+				</section>
+				<section>
+					<img width="600" src="images/angular-js-service-diagram.png" alt="">
+				</section>
+			</section>
+
+			<section>
+				<h2>Custom service</h2>
+<pre class="fragment"><code>// javascript code
+angular.module('myApp').factory('MyService', function($q,$http){
+	
+	var api = 'https://api.myapp.com/';
+
+	return {
+		getAllUsers : function(){
+			return $http.get(api + 'users');
+		},
+		getOne: function(userId){
+			return $http.get(api + 'users?userid=' + userId);
+		}
+	}
+});
+</code></pre>
+<pre class="fragment"><code>// javascript code
+angular.module('myApp').controller('MyCtrl', function(MyService,$scope){
+	MyService.getAllUsers().then(function(users){
+		$scope.users = users;
+	});
+});
+</code></pre>
+			</section>
+			
+			<section>
+				<h2>Router</h2>
+				<p class="fragment">
+					"Router berfungsi untuk mengatur view mana yang akan ditampilkan di dalam ng-view sesuai dengan konfigurasi yang ditentukan"
+				</p>
+				<p class="fragment">
+					"Konfigurasi routing dilakukan dalam modul config dan dilakukan terhadap $routeProvider"
+				</p>
+			</section>
+			
+			<section>
+				<h2>Router</h2>
+<pre><code data-trim>// create a new module
+var app = angular.module('myApp',['ngRoute']);
+
+/* konfigurasi routing */
+app.config(function($routeProvider){
+  $routeProvider
+  	.when('/',{
+	   template:'<h1>Hello World</h1>'
+	})
+	.when('/posts', {
+	   templateUrl:'views/posts.html',
+	   controller: 'PostCtrl'
+	})
+	.when('/post/:id',{
+	   templateUrl: 'views/single_post.html',
+	   controller:'SinglePostCtrl',
+	   resolve:{
+	      return {
+	      	getPost: function(BlogService, $routeParams){
+	      		return BlogService.getOne($routeParams.id);
+	      	}
+	      }
+	   }
+	})
+	.otherwise({
+		redirectTo: '/'
+  	});
+});
+</code></pre>
+<pre><code> <!-- html code -->
+<div class="container">
+	<ng-view></ng-view>
+</div>
 </code></pre>
 			</section>
 
 			<section>
 				<h2>animasi</h2>
-				<h3>Bosan dengan tamplian web statis ??</h3>
-				<p>"Let's improve user experience using Animation!! :)"</p>
+				<p class="fragment">
+					Bosan dengan tamplian web statis ??
+				</p>
+				<p class="fragment">
+					"Let's improve user experience using Animation!! :)"
+				</p>
+				<p class="fragment">
+					"Animasi dimungkinkan berbasis CSS dan Javascript"
+				</p>
 			</section>
 
 			<section>
 				<h2>animasi</h2>
-				<section>
-					<p>&nbsp;</p>
-					<table>
-						<tr>
-							<th>Directive Name</th>
-							<th>Animation</th>
-						</tr>
-						<tr>
-							<td>ngView</td>
-							<td>enter,move,leave</td>
-						</tr>
-						<tr>
-							<td>ngInclude</td>
-							<td>enter,leave</td>
-						</tr>
-						<tr>
-							<td>ngIf</td>
-							<td>enter,leave</td>
-						</tr>
-						<tr>
-							<td>ngRepeat</td>
-							<td>enter,move,leave</td>
-						</tr>
-						<tr>
-							<td>...</td>
-							<td>...</td>
-						</tr>
-						<tr>
-							<td colspan="2">Selengkapnya -> <a href="https://docs.angularjs.org/api/ngAnimate" target="_blank">Animation  Docs</a></td>
-						</tr>
-					</table>
-					<p class="fragment">"Hampir semua directive dalam AngularJS dapat ditambahkan animasi"</p>
-				</section>
-				<section>
-					<p>&nbsp;</p>
-					<h3>Animasi berbasis css</h3>
-<pre><code><ng-view class="animation"></ng-view></code></pre>
-<pre><code>// file css
+				<table>
+					<tr>
+						<th>Directive Name</th>
+						<th>Animation</th>
+					</tr>
+					<tr>
+						<td>ngView</td>
+						<td>enter,move,leave</td>
+					</tr>
+					<tr>
+						<td>ngInclude</td>
+						<td>enter,leave</td>
+					</tr>
+					<tr>
+						<td>ngIf</td>
+						<td>enter,leave</td>
+					</tr>
+					<tr>
+						<td>ngRepeat</td>
+						<td>enter,move,leave</td>
+					</tr>
+					<tr>
+						<td>...</td>
+						<td>...</td>
+					</tr>
+					<tr>
+						<td colspan="2">Selengkapnya -> <a href="https://docs.angularjs.org/api/ngAnimate" target="_blank">Animation  Docs</a></td>
+					</tr>
+				</table>
+				<p class="fragment">"Hampir semua directive dalam AngularJS dapat ditambahkan animasi"</p>
+			</section>
+			<section>
+				<h2>Animasi berbasis css</h2>			
+<pre class="fragment"><code>// inject modul ngAnimate ke dalam applikasi
+angular.module('myApp',['ngAnimate']);
+</code></pre>
+<pre class="fragment"><code><ng-view class="animation"></ng-view></code></pre>
+<pre class="fragment"><code>// file css
 .animation.ng-enter{
 	// animasi transisi ketika
 	// komponen akan di render di layar
@@ -455,12 +566,14 @@ app.controller('FirstController', function($rootScope){
 }
 
 </code></pre>
-				</section>
-				<section>
-					<p>&nbsp;</p>
-					<h3>Animasi berbasis Javascript</h3>
-<pre><code><ng-view class="animation"></ng-view></code></pre>
-<pre><code>angular.module('myApp')
+			</section>
+			<section>
+				<h2>Animasi berbasis Javascript</h2>
+<pre class="fragment"><code>// inject modul ngAnimate ke dalam applikasi
+angular.module('myApp',['ngAnimate']);
+</code></pre>
+<pre class="fragment"><code><ng-view class="animation"></ng-view></code></pre>
+<pre class="fragment"><code>angular.module('myApp')
 .animation('.animation', function(){
 	return {
 		enter : function(element,done){
@@ -479,7 +592,10 @@ app.controller('FirstController', function($rootScope){
 <p class="fragment">
 	<a href="http://www.yearofmoo.com/tags/animation.html" target="_blank">Resource untuk belajar animasi</a>
 </p>
-				</section>
+			</section>
+
+			<section>
+				<h1>It's show time!!!</h1>
 			</section>
 
 			<section>
@@ -492,10 +608,6 @@ app.controller('FirstController', function($rootScope){
 					<li class="fragment">Jangan memanipulasi data di dalam template</li>
 					<li class="fragment">Letakkan proses yang berulang-ulang untuk setiap route di dalam service "run"</li>
 				</ul>
-			</section>
-
-			<section>
-				<h1>It's show time!!!</h1>
 			</section>
 	
 			<section>
@@ -528,6 +640,7 @@ app.controller('FirstController', function($rootScope){
 			<section>
 				<h1>question??</h1>
 			</section>
+
 		</div>
 	</div>
 

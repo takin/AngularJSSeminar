@@ -6,7 +6,7 @@ Pastikan NodeJS sudah terinstall
 ## Instalasi Slide
 Untuk menggunakan slide:
 - masuk ke folder slide dan lakukan instalasi dengan menggunakan "npm install"
-- untuk menjalankan slide "npm start" dan buka browser localhot:8000/presenter
+- untuk menjalankan slide "npm start" dan buka browser http://localhost:8000/presenter
 
 ## Insalasi Demo Aplikasi
 Untuk menggunakan demoapp:

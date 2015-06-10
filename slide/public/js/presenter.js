@@ -2,7 +2,7 @@
 
 	'use strict';
 
-	var socket = io.connect("http://192.168.43.211:8000");
+	var socket = io.connect("http://localhost:8000");
 	
 
 	function getNextSlide(){
@@ -23,6 +23,8 @@
 		touch:true,
 		history:true,
 		height: 800,
+		controls: false,
+		progress: false,
 		hideAddressBar: true,
 		dependencies: [
 			{ src: 'components/reveal.js/plugin/tagcloud/tagcloud.js'},

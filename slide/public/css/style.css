@@ -1,3 +1,10 @@
+/*hacked for highlight js background color*/
+.reveal pre code {
+	/*background: #fcfcfc;*/
+}
+.white-text{
+	color: #fff;
+}
 span.clouditem {
   padding-left: 0.15em;
   padding-right: 0.15em;

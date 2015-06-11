@@ -12,8 +12,9 @@
 	<div class="reveal">
 		<div class="slides">
 			<section>
-				<h2>Build Awesome and Fast Web App Using AngularJS</h2>
+				<h3>Build Awesome and Fast Web App Using AngularJS</h3>
 				<img width="400" src="images/angular-logo.png" noboarder alt="Angular logo">
+				<p>https://goo.gl/TZBlu8</p>
 			</section>
 			<section>
 				<img src="images/me.jpg" height="300" alt="">
@@ -25,31 +26,18 @@
 			</section>
 			<section data-transition>
 				<h1>agenda</h1>
-				<p>~ Pengenalan AngularJS</p>
 				<p>~ Pengenalan SPA (Single Page Application)</p>
+				<p>~ Pengenalan AngularJS</p>
 				<p>~ Pengenalan Arsitektur AngularJS</p>
 				<p>~ Pengenalan Fitur Utama AngularJS</p>
 				<p>~ Demo Aplikasi</p>
 			</section>
 
 			<section>
-				<section>
-					<h2>Web application trend</h2>
-					<img class="stretch" src="images/thin-server.png" alt="">
-					<p class="fragment">Delivery data pada thin client menggunakan HTML</p>
-					<p class="fragment">Delivery data pada thick client menggunakan XML/JSON</p>
-				</section>
-				<section data-background="rgb(117,107,5)">
-					<img src="images/impedance-mismatch.jpg" class="stretch" alt="">
-				</section>
-				<section data-background="rgb(57, 117, 8)">
-					<img src="images/object-database.jpg" class="stretch" alt="">
-					<p class="fragment">"Relational database"</p>
-					<p class="fragment">"MySQL MSSQL Postgresql"</p>
-				</section>
-				<section data-background="rgb(52, 8, 117)	">
-					<img src="images/impedance-mismatch-2.jpeg" class="stretch" alt="">
-				</section>
+				<h2>Web application trend</h2>
+				<img class="stretch" src="images/thin-server.png" alt="">
+				<p class="fragment">Delivery data pada thin client menggunakan HTML</p>
+				<p class="fragment">Delivery data pada thick client menggunakan XML/JSON</p>
 			</section>
 
 			<section>
@@ -64,7 +52,7 @@
 				</ul>
 			</section>
 
-			<section data-transition="fade" tagcloud large>
+			<section data-background="rgb(118, 5, 128)" data-transition="fade" tagcloud large>
 				<span tagcloud-weight="7">jQuery</span>
 				<span tagcloud-weight="10">AngularJS</span>
 				<span tagcloud-weight="6">Sencha</span>
@@ -76,6 +64,37 @@
 				<span tagcloud-weight="4">KnockoutJS</span>
 			</section>
 			
+			<section>
+				<h2>Single Page Application</h2>
+				<ul>
+					<li class="fragment">A next evolution of traditional web</li>
+					<li class="fragment">Web apps that load a single HTML page</li>
+					<li class="fragment">Uses HTML5 and AJAX</li>
+				</ul>
+				<p class="fragment">
+					<img height="150" src="images/facebook.png" alt="">
+					<img height="150" src="images/gmail.png" alt="">
+					<img height="155" src="images/twitter.png" alt="">
+				</p>
+			</section>
+	
+			<section>
+				<img class="stretch" src="images/spa-lifecycle.png" alt="">
+			</section>
+
+			<section>
+				<img class="stretch" src="images/spa-model.png" alt="">
+			</section>
+
+			<section>
+				<h2>SPA Benefit</h2>
+				<ul>
+					<li class="fragment">No page flicker</li>
+					<li class="fragment">Better User Experience</li>
+					<li class="fragment">Faster interaction</li>
+				</ul>
+			</section>
+
 			<section data-transition="fade">
 				<section>
 					<h1>AngularJS...</h1>
@@ -175,12 +194,8 @@
 					<img class="stretch" src="images/js-everywhere.jpg" alt="">
 				</section>
 			</section>
-
-			<section>
-				<h2>Single Page Application</h2>
-				<img class="stretch" src="images/spa-model.png" alt="">
-			</section>
 			
+
 			<section>
 				<h2>Arsitektur</h2>
 				<img class="stretch" src="images/angular-architecture.png" height="500" />
@@ -598,19 +613,24 @@ angular.module('myApp',['ngAnimate']);
 			</section>
 
 			<section>
-				<h1>It's show time!!!</h1>
+				<h1>It's demo time!!!</h1>
 			</section>
 
 			<section>
-				<h2>Tips membangun aplikasi</h2>
-				<ul>
-					<li class="fragment">Gunakan HTML untuk membangun template</li>
-					<li class="fragment">Jangan gunakan controller untuk memanipulasi data</li>
-					<li class="fragment">Gunakan Service/Factory untuk berkomunikasi dengan server</li>
-					<li class="fragment">Gunakan directive untuk bagian-bagian yang reusable</li>
-					<li class="fragment">Jangan memanipulasi data di dalam template</li>
-					<li class="fragment">Letakkan proses yang berulang-ulang untuk setiap route di dalam service "run"</li>
-				</ul>
+				<section>
+					<h2>Impedance Mismatch</h2>
+					<img class="fragment" src="images/impedance-mismatch.jpg" class="stretch" alt="">
+					<p class="fragment">Using relational database to store the data</p>
+					<p class="fragment">"MySQL, MSSQL, Postgresql"</p>
+				</section>
+				<section>
+					<img src="images/object-database.jpg" class="stretch" alt="">
+					<p>"Document/Object database"</p>
+					<p class="fragment">"MongoDB CouchDB"</p>
+				</section>
+				<section>
+					<img src="images/impedance-mismatch-2.jpeg" class="stretch" alt="">
+				</section>
 			</section>
 	
 			<section>
@@ -630,6 +650,22 @@ angular.module('myApp',['ngAnimate']);
 					<li>Jasmine</li>
 					<li>MongoDB</li>
 				</ul>
+			</section>
+
+			<section>
+				<h2>Learning Resource</h2>
+				<p>
+					<a href="https://docs.angularjs.org">https://docs.angularjs.org/</a>
+				</p>
+				<p>
+					<a href="http://angularjs.io/">http://angularjs.io/</a>
+				</p>
+				<p>
+					<a href="https://egghead.io/technologies/angularjs">https://egghead.io/technologies/angularjs</a>
+				</p>
+				<p>
+					<a href="http://www.yearofmoo.com/">http://www.yearofmoo.com/</a>
+				</p>
 			</section>
 
 			<section>

@@ -397,6 +397,14 @@ angular.module('myApp')
 			<section>
 				<h2>service</h2>
 				<section>
+<pre><code>// javascript code
+angular.module('myApp')
+.controller('MyCtrl', function($http, $scope, MyService){
+	$http.get('/users').success(function(users){
+		$scope.users = users;
+	});
+});
+</code></pre>
 					<p class="fragment">
 						"Object yang dapat diinjeksikan ke dalam modul dengan menggunakan Dependency Injection"
 					</p>
@@ -409,14 +417,6 @@ angular.module('myApp')
 					<p class="fragment">
 						"Umumnya digunakan sebagai modul untuk berkomunikasi dengan data source"
 					</p>
-<pre class="fragment"><code>// javascript code
-angular.module('myApp')
-.controller('MyCtrl', function($http, $scope, MyService){
-	$http.get('/users').success(function(users){
-		$scope.users = users;
-	});
-});
-</code></pre>
 				</section>
 				<section>
 					<img width="600" src="images/angular-js-service-diagram.png" alt="">
@@ -511,39 +511,6 @@ app.config(function($routeProvider){
 			</section>
 
 			<section>
-				<h2>animasi</h2>
-				<table>
-					<tr>
-						<th>Directive Name</th>
-						<th>Animation</th>
-					</tr>
-					<tr>
-						<td>ngView</td>
-						<td>enter,move,leave</td>
-					</tr>
-					<tr>
-						<td>ngInclude</td>
-						<td>enter,leave</td>
-					</tr>
-					<tr>
-						<td>ngIf</td>
-						<td>enter,leave</td>
-					</tr>
-					<tr>
-						<td>ngRepeat</td>
-						<td>enter,move,leave</td>
-					</tr>
-					<tr>
-						<td>...</td>
-						<td>...</td>
-					</tr>
-					<tr>
-						<td colspan="2">Selengkapnya -> <a href="https://docs.angularjs.org/api/ngAnimate" target="_blank">Animation  Docs</a></td>
-					</tr>
-				</table>
-				<p class="fragment">"Hampir semua directive dalam AngularJS dapat ditambahkan animasi"</p>
-			</section>
-			<section>
 				<h2>Animasi berbasis css</h2>			
 <pre class="fragment"><code>// inject modul ngAnimate ke dalam applikasi
 angular.module('myApp',['ngAnimate']);
@@ -595,6 +562,40 @@ angular.module('myApp',['ngAnimate']);
 			</section>
 
 			<section>
+				<h2>animasi</h2>
+				<table>
+					<tr>
+						<th>Directive Name</th>
+						<th>Animation</th>
+					</tr>
+					<tr>
+						<td>ngView</td>
+						<td>enter,move,leave</td>
+					</tr>
+					<tr>
+						<td>ngInclude</td>
+						<td>enter,leave</td>
+					</tr>
+					<tr>
+						<td>ngIf</td>
+						<td>enter,leave</td>
+					</tr>
+					<tr>
+						<td>ngRepeat</td>
+						<td>enter,move,leave</td>
+					</tr>
+					<tr>
+						<td>...</td>
+						<td>...</td>
+					</tr>
+					<tr>
+						<td colspan="2">Selengkapnya -> <a href="https://docs.angularjs.org/api/ngAnimate" target="_blank">Animation  Docs</a></td>
+					</tr>
+				</table>
+				<p class="fragment">"Hampir semua directive dalam AngularJS dapat ditambahkan animasi"</p>
+			</section>
+
+			<section>
 				<h1>It's show time!!!</h1>
 			</section>
 
@@ -640,7 +641,6 @@ angular.module('myApp',['ngAnimate']);
 			<section>
 				<h1>question??</h1>
 			</section>
-
 		</div>
 	</div>
 
